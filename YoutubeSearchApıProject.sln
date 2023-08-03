@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeSearchApıProject", "YoutubeSearchApıProject\YoutubeSearchApıProject.csproj", "{AC63818D-C745-4468-ACA8-A321B41EE20F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC63818D-C745-4468-ACA8-A321B41EE20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC63818D-C745-4468-ACA8-A321B41EE20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC63818D-C745-4468-ACA8-A321B41EE20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC63818D-C745-4468-ACA8-A321B41EE20F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1379E8B-8C5C-4335-80DB-E5986B4F7894}
+	EndGlobalSection
+EndGlobal
