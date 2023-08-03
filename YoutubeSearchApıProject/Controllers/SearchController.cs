@@ -34,7 +34,6 @@ namespace YoutubeSearchApıProject.Controllers
                     VideoUrl = "https://www.youtube.com/watch?v=" + item.id.videoId,
                 });
             }
-
             return View(list);
         }
 
