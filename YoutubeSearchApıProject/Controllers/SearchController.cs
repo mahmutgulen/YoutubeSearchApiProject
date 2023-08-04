@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using YoutubeSearchApıProject.Entities;
+using static YoutubeSearchApıProject.Entities.YoutubeSearchDto;
 
 namespace YoutubeSearchApıProject.Controllers
 {
@@ -9,7 +10,7 @@ namespace YoutubeSearchApıProject.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(string search)
         {
-            string apiKey = "AIzaSyA9jao3Hrl_O_ftckE8KS_eZmzU1SX5ric";
+            string apiKey = "AIzaSyAX6Lu92n7cNR-Y645HSj-gVMTl076Hgt0"; 
             string url = "https://www.googleapis.com/youtube/v3/";
 
             string request = $"{url}search?part=snippet&key={apiKey}&type=video&q={search}";
@@ -21,6 +22,20 @@ namespace YoutubeSearchApıProject.Controllers
             var response = await httpClient.GetAsync($"{request}");
             string apiResponse = await response.Content.ReadAsStringAsync();
             var data = JsonConvert.DeserializeObject<YoutubeSearchDto.Root>(apiResponse);
+
+            if (data.items == null)
+            {
+                list.Add(new ResponseDto
+                {
+                    ImgHeight = 0,
+                    ImgWidth = 0,
+                    ImgUrl = "",
+                    VideoDescription = "",
+                    VideoTitle = "",
+                    VideoUrl = "",
+                });
+                return View(list);
+            }
 
             foreach (var item in data.items)
             {
