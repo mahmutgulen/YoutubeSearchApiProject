@@ -10,7 +10,8 @@ namespace YoutubeSearchApıProject.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(string search)
         {
-            string apiKey = "AIzaSyAX6Lu92n7cNR-Y645HSj-gVMTl076Hgt0"; 
+            //string apiKey = "AIzaSyAX6Lu92n7cNR-Y645HSj-gVMTl076Hgt0"; 
+            string apiKey = "A"; 
             string url = "https://www.googleapis.com/youtube/v3/";
 
             string request = $"{url}search?part=snippet&key={apiKey}&type=video&q={search}";
@@ -27,12 +28,12 @@ namespace YoutubeSearchApıProject.Controllers
             {
                 list.Add(new ResponseDto
                 {
-                    ImgHeight = 0,
-                    ImgWidth = 0,
-                    ImgUrl = "",
-                    VideoDescription = "",
-                    VideoTitle = "",
-                    VideoUrl = "",
+                    ImgHeight = 360,
+                    ImgWidth = 480,
+                    ImgUrl = "https://i.ytimg.com/vi/xHHXiztEGuk/hqdefault.jpg",
+                    VideoDescription = "Kanalımıza abone olmak için tıklayınız! ⇙ Subscribe! https://goo.gl/dMGQ76 Yeni çalışmalarımızdan haberdar olmak için, ...",
+                    VideoTitle = "Tan Taşçı - Yalan (Mert Kurt Remix)",
+                    VideoUrl = "https://www.youtube.com/watch?v=xHHXiztEGuk",
                 });
                 return View(list);
             }
